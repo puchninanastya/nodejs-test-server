@@ -1,14 +1,24 @@
 {
-  "name": "sample-2k18",
+  "name": "nodejs-test-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Test web server with node js",
   "main": "index.js",
   "scripts": {
+    "start": "DEBUG=* node server.js",
+    "start:raw": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Puchnina Anastasiya",
-  "license": "ISC",
+  "author": "Anastasiya Puchnina",
+  "keywords": [
+    "node",
+    "heroku"
+  ],
+  "license": "MIT",
   "dependencies": {
     "debug": "^3.1.0"
+  },
+  "engines": {
+    "node": "9.5.0",
+    "npm": "5.6.0"
   }
 }

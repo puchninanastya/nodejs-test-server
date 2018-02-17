@@ -6,9 +6,11 @@ const debug = require('debug');
 const logger = debug('mylogger');
 
 const server = http.createServer((req, res) => {
-  logger(req.url);
+  logger(req.method, req.url);
 
-  logger(process.memoryUsage());
+  if (req.url === '/' || req.url === '') {
+      req.url = '/index.html';
+  }
 
   fs.readFile( path.join(__dirname, '/public', req.url) , (err, data) => {
     if (err) {
@@ -23,4 +25,5 @@ const server = http.createServer((req, res) => {
   });
 });
 
-server.listen(process.env.PORT);
+server.listen(process.env.PORT || 3000);
+logger("Server started!");
