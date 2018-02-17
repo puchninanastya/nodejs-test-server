@@ -10,5 +10,5 @@ button.onClick = () => {
 };*/
 
 button.addEventListener('click', () => {
-  text.innerText = 'Welcome to Frontend';
+  text.innerText = 'Welcome to Frontend!';
 })
